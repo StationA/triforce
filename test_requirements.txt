@@ -1,0 +1,10 @@
+# Testing
+pytest
+mock
+hypothesis
+
+# Code style
+prospector
+
+# Coverage
+coverage
