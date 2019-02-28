@@ -1,16 +1,5 @@
 #!/usr/bin/env python
 from setuptools import setup, find_packages
-from pip.req import parse_requirements
-from pip.download import PipSession
-
-
-SESSION = PipSession()
-INSTALL_REQUIRES = [
-    str(r.req) for r in parse_requirements('./requirements.txt', session=SESSION)
-]
-TESTS_REQUIRE = [
-    str(r.req) for r in parse_requirements('./test_requirements.txt', session=SESSION)
-]
 
 
 setup(
@@ -22,7 +11,10 @@ setup(
     url='https://github.com/StationA/triforce',
     packages=find_packages(exclude=['*tests*']),
     zip_safe=False,
-    install_requires=INSTALL_REQUIRES,
-    tests_require=TESTS_REQUIRE,
+    entry_points={
+        'console_scripts': [
+            'triforce=triforce.__main__:main'
+        ],
+    },
     license='License :: OSI Approved :: MIT License',
 )

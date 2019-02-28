@@ -1,5 +1,6 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+.pytest_cache
 *.py[cod]
 *$py.class
 
@@ -39,10 +40,10 @@ htmlcov/
 .tox/
 .coverage
 .coverage.*
+.coverage-report*
 .cache
 nosetests.xml
 coverage.xml
-.coverage*
 *,cover
 .hypothesis/
 
@@ -90,12 +91,10 @@ dev/
 # Rope project settings
 .ropeproject
 
-# PEX
-.pex
-dist
-
 # IDE files
 .idea/
 
 # OS X files
 .DS_Store
+
+*.zip

@@ -2,10 +2,10 @@ from parsimonious import Grammar
 
 
 GRAMMAR = Grammar('''
-    triple = subject WS+ predicate WS+ object WS* "." WS*
+    triple = subject WS+ predicate WS+ value WS* "." WS*
     subject = IRIREF / BLANK_NODE_LABEL
     predicate = IRIREF
-    object = IRIREF / BLANK_NODE_LABEL / literal
+    value = IRIREF / BLANK_NODE_LABEL / literal
     literal = STRING_LITERAL_QUOTE (("^^" IRIREF) / LANGTAG)?
     LANGTAG = "@" ~r"[a-zA-Z]+" ("-" ~r"[a-zA-Z0-9]+")*
     IRIREF = "<" (~r"[^\\x00-\\x20\<\>\\"\\{\\}\\|\\^`\\\\]" / UCHAR)* ">"
@@ -28,5 +28,5 @@ GRAMMAR = Grammar('''
 ''')
 
 
-def decode(ntriple):
+def run(ntriple):
     return GRAMMAR.parse(ntriple)

@@ -1,8 +1,4 @@
-try:
-    from urlparse import urlparse
-except ImportError:
-    # Python 3 forward compatibility
-    from urllib.parse import urlparse
+from urllib.parse import urlparse
 
 
 BASE_XMLSCHEMA_URI = 'http://www.w3.org/2001/XMLSchema'

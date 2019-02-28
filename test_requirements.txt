@@ -1,10 +1,11 @@
 # Testing
-pytest
-mock
-hypothesis
+pytest==3.4.0
+mock==2.0.0
+hypothesis==3.44.26
 
 # Code style
-prospector
+pylint==1.8.2
+flake8==3.5.0
 
 # Coverage
-coverage
+coverage==4.5

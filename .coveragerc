@@ -1,0 +1,6 @@
+[run]
+omit =
+    **/__*.py
+    triforce/logging.py
+    triforce/server.py
+    triforce/settings.py

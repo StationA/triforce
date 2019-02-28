@@ -21,11 +21,8 @@ pip install .
 
 ### Encoding a subject, predicate, value as an n-triple
 
-```python
-import triforce
-
-nt = triforce.encode('http://stationa.xyz', 'http://schema.org/name', 'Station A')
-print(nt)
+```bash
+triforce encode 'http://stationa.xyz' 'http://schema.org/name' 'Station A'
 # <http://stationa.xyz> <http://schema.org/name> "Station A" .
 ```
 

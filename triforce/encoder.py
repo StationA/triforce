@@ -1,7 +1,7 @@
 from triforce.things import IRI, Literal
 
 
-def encode(subject, predicate, value):
+def run(subject, predicate, value):
     """Encodes a subject, predicate, value as an n-triple string.
 
     Encoding is done per the EBNF grammar and specification outlined on

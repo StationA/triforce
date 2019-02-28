@@ -1,0 +1,6 @@
+.git
+.tox
+.cache
+*.pyc
+*.egg-info
+dev

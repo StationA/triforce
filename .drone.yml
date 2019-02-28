@@ -1,0 +1,25 @@
+pipeline:
+  build:
+    image: registry.stationa.io/stationa/base:latest
+    pull: true
+    commands:
+      - tox --sitepackages
+  publish:
+    image: plugins/docker
+    pull: true
+    registry: registry.stationa.io
+    repo: registry.stationa.io/stationa/triforce
+    tags:
+      - ${DRONE_BRANCH}-${DRONE_COMMIT_SHA}
+      - ${DRONE_BRANCH}-latest
+    when:
+      event: push
+  publish:
+    image: plugins/docker
+    pull: true
+    registry: registry.stationa.io
+    repo: registry.stationa.io/stationa/triforce
+    tags:
+      - ${DRONE_TAG}
+    when:
+      event: tag
