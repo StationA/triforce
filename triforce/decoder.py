@@ -4,7 +4,7 @@ from parsimonious import Grammar
 GRAMMAR = Grammar('''
     triple = subject WS+ predicate WS+ value WS* "." WS*
     subject = IRIREF / BLANK_NODE_LABEL
-    predicate = IRIREF
+    predicate = IRIREF / BLANK_NODE_LABEL
     value = IRIREF / BLANK_NODE_LABEL / literal
     literal = STRING_LITERAL_QUOTE (("^^" IRIREF) / LANGTAG)?
     LANGTAG = "@" ~r"[a-zA-Z]+" ("-" ~r"[a-zA-Z0-9]+")*
