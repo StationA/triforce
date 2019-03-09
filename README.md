@@ -1,9 +1,9 @@
 # triforce
 No-bullshit n-triples encoder/decoder
 
-# Getting Started
+## Getting Started
 
-### Installing latest (master) from Github
+### Installing from Github
 
 ```
 pip install git+https://github.com/StationA/triforce.git#egg=triforce
@@ -17,7 +17,7 @@ cd triforce
 pip install .
 ```
 
-# Usage
+## Usage
 
 ### Encoding a subject, predicate, value as an n-triple
 
@@ -26,7 +26,13 @@ triforce encode 'http://stationa.xyz' 'http://schema.org/name' 'Station A'
 # <http://stationa.xyz> <http://schema.org/name> "Station A" .
 ```
 
-# Contributing
+## Contributing
+
+When contributing to this repository, please follow the steps below:
+
+1. Fork the repository
+1. Submit your patch in one commit, or a series of well-defined commits
+1. Submit your pull request and make sure you reference the issue you are addressing
 
 ### Running tests
 
